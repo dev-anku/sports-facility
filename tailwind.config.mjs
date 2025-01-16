@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+const config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,11 +7,20 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        raleway: ["Poppins", "sans-serif"],
+        newsreader: ["Exo 2", "serif"],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: {
+          default: "#00354d",
+          dark: "#013047",
+        },
+        button: "#efff49",
       },
     },
   },
   plugins: [],
 };
+
+export default config;
